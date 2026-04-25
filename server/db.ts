@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { eq, desc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, leads, Lead, InsertLead, machines, InsertMachine, rentals, InsertRental } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,76 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+// Lead queries
+export async function createLead(lead: InsertLead) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(leads).values(lead);
+  return { insertId: (result as any).insertId || 0 };
+}
+
+export async function getAllLeads() {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(leads).orderBy(desc(leads.createdAt));
+}
+
+export async function getLeadById(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.select().from(leads).where(eq(leads.id, id)).limit(1);
+  return result[0];
+}
+
+export async function updateLeadStatus(id: number, status: Lead["status"]) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.update(leads).set({ status, updatedAt: new Date() }).where(eq(leads.id, id));
+}
+
+export async function deleteLead(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.delete(leads).where(eq(leads.id, id));
+}
+
+// Machine queries
+export async function getAllMachines() {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(machines).orderBy(machines.category);
+}
+
+export async function getMachineById(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.select().from(machines).where(eq(machines.id, id)).limit(1);
+  return result[0];
+}
+
+export async function createMachine(machine: InsertMachine) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(machines).values(machine);
+  return { insertId: (result as any).insertId || 0 };
+}
+
+// Rental queries
+export async function createRental(rental: InsertRental) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(rentals).values(rental);
+  return { insertId: (result as any).insertId || 0 };
+}
+
+export async function getRentalsByMachineId(machineId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(rentals).where(eq(rentals.machineId, machineId));
+}
+
+export async function getAllRentals() {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(rentals).orderBy(desc(rentals.createdAt));
+}
