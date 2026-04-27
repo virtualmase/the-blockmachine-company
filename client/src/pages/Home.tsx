@@ -1,47 +1,38 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
-import { ArrowRight, Zap, Leaf, MapPin, TrendingUp } from "lucide-react";
-import { useEffect, useState } from "react";
-import { trpc } from "@/lib/trpc";
+import { ArrowRight, Zap, Leaf, Shield, Truck } from "lucide-react";
+import TrustSignals from "@/components/TrustSignals";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   const { user } = useAuth();
-  const [machines, setMachines] = useState<any[]>([]);
-  const machinesQuery = trpc.machines.getAll.useQuery();
-
-  useEffect(() => {
-    if (machinesQuery.data) {
-      setMachines(machinesQuery.data.slice(0, 3));
-    }
-  }, [machinesQuery.data]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 md:py-32">
+      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
               Concrete Block Machines Built for SoCal
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 mb-8 font-light">
+            <p className="text-2xl text-slate-200 mb-6 font-light">
               Smart. Sustainable. SoCal Built.
             </p>
-            <p className="text-lg text-slate-300 mb-10 max-w-2xl">
-              Industry-leading block making equipment, rentals, and sustainable solutions for Orange County and Greater LA contractors.
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl">
+              Industry-leading block making equipment, rentals, and sustainable solutions for Orange County and Greater Los Angeles contractors and developers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white w-full sm:w-auto">
                   Request a Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/machines">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-                  Get Started
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">
+                  View Machines
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -50,166 +41,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Bar */}
-      <section className="bg-slate-50 py-8 border-b border-slate-200">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="text-3xl font-bold text-slate-900">20+</p>
-              <p className="text-slate-600 text-sm">Years Experience</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-slate-900">500+</p>
-              <p className="text-slate-600 text-sm">Machines Deployed</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-slate-900">Anaheim</p>
-              <p className="text-slate-600 text-sm">SoCal Headquarters</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-slate-900">CALGreen</p>
-              <p className="text-slate-600 text-sm">Certified</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-4xl font-bold text-center mb-4 text-slate-900">Why Choose BlockMachine Co?</h2>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-            We deliver reliable, sustainable block production solutions tailored to Southern California contractors.
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader>
-                <Zap className="h-8 w-8 text-orange-500 mb-4" />
-                <CardTitle className="text-lg">Maximum Efficiency</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 text-sm">
-                  High-output machines designed for rapid production without compromising quality.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader>
-                <Leaf className="h-8 w-8 text-green-600 mb-4" />
-                <CardTitle className="text-lg">Eco-Friendly</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 text-sm">
-                  CALGreen compliant solutions with recycled content and minimal embodied carbon.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader>
-                <MapPin className="h-8 w-8 text-blue-600 mb-4" />
-                <CardTitle className="text-lg">Local Support</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 text-sm">
-                  Anaheim-based team providing fast, responsive service to SoCal contractors.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader>
-                <TrendingUp className="h-8 w-8 text-slate-600 mb-4" />
-                <CardTitle className="text-lg">Fast ROI</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-600 text-sm">
-                  Flexible rental and purchase options designed to maximize your profitability.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Machines */}
+      {/* Value Propositions */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-4xl font-bold text-center mb-4 text-slate-900">Featured Machines</h2>
-          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-            Explore our range of concrete block making equipment, from semi-automatic to fully-automatic systems.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {machines.length > 0 ? (
-              machines.map((machine) => (
-                <Link key={machine.id} href={`/machines/${machine.id}`}>
-                  <Card className="border-0 shadow-sm hover:shadow-lg transition-all cursor-pointer h-full">
-                    {machine.imageUrl && (
-                      <div className="h-48 bg-slate-200 overflow-hidden rounded-t-lg">
-                        <img
-                          src={machine.imageUrl}
-                          alt={machine.name}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform"
-                        />
-                      </div>
-                    )}
-                    <CardHeader>
-                      <CardTitle className="text-lg">{machine.name}</CardTitle>
-                      <CardDescription>{machine.model}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-slate-600 mb-4">{machine.description}</p>
-                      <div className="space-y-2 text-sm">
-                        {machine.outputPerHour && (
-                          <p className="text-slate-700">
-                            <span className="font-semibold">Output:</span> {machine.outputPerHour}
-                          </p>
-                        )}\n                        {machine.power && (
-                          <p className="text-slate-700">
-                            <span className="font-semibold">Power:</span> {machine.power}
-                          </p>
-                        )}
-                      </div>
-                      {machine.price && (
-                        <p className="text-lg font-bold text-slate-900 mt-4">
-                          ${parseFloat(machine.price).toLocaleString()}
-                        </p>
-                      )}
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))
-            ) : (
-              <div className="col-span-3 text-center py-12">
-                <p className="text-slate-600">Loading machines...</p>
-              </div>
-            )}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/machines">
-              <Button size="lg" variant="outline">
-                View All Machines
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <Zap className="h-8 w-8 text-orange-500 mb-4" />
+              <h3 className="font-semibold text-slate-900 mb-2">30% Faster Production</h3>
+              <p className="text-slate-600 text-sm">Increase output and efficiency with our advanced block making technology.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <Leaf className="h-8 w-8 text-green-600 mb-4" />
+              <h3 className="font-semibold text-slate-900 mb-2">CALGreen Certified</h3>
+              <p className="text-slate-600 text-sm">Meet California sustainability standards with our eco-friendly machines.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <Shield className="h-8 w-8 text-blue-600 mb-4" />
+              <h3 className="font-semibold text-slate-900 mb-2">Fully Supported</h3>
+              <p className="text-slate-600 text-sm">24/7 technical support and maintenance included with every machine.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <Truck className="h-8 w-8 text-slate-600 mb-4" />
+              <h3 className="font-semibold text-slate-900 mb-2">Same-Day Delivery</h3>
+              <p className="text-slate-600 text-sm">Quick deployment across Southern California with setup included.</p>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Trust Signals */}
+      <TrustSignals />
+
+      {/* Testimonials */}
+      <Testimonials />
+
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Block Production?</h2>
-          <p className="text-xl text-slate-200 mb-8 max-w-2xl mx-auto">
-            Contact our team today for a personalized consultation and quote.
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Production?</h2>
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+            Join hundreds of contractors and developers across Southern California who trust BlockMachine Co.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
-              Get in Touch
+            <Button size="lg" className="bg-white hover:bg-slate-100 text-orange-600 font-semibold">
+              Get Started Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

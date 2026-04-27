@@ -12,9 +12,11 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/machines", label: "Machines" },
+    { href: "/rentals", label: "Rentals" },
     { href: "/sustainability", label: "Sustainability" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
+    { href: "/faq", label: "FAQ" },
   ];
 
   const isActive = (href: string) => {

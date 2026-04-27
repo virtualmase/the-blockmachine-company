@@ -10,20 +10,28 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Admin from "./pages/Admin";
 import Sustainability from "./pages/Sustainability";
+import Rentals from "./pages/Rentals";
+import FAQ from "./pages/FAQ";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/machines"} component={Machines} />
-      <Route path={"/contact"} component={Contact} />
-      <Route path={"/about"} component={About} />
-      <Route path={"/sustainability"} component={Sustainability} />
-      <Route path={"/admin"} component={Admin} />
-      <Route path={"/404"} component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/machines"} component={Machines} />
+        <Route path={"/rentals"} component={Rentals} />
+        <Route path={"/contact"} component={Contact} />
+        <Route path={"/about"} component={About} />
+        <Route path={"/sustainability"} component={Sustainability} />
+        <Route path={"/faq"} component={FAQ} />
+        <Route path={"/admin"} component={Admin} />
+        <Route path={"/404"} component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+      <Footer />
+    </>
   );
 }
 
@@ -37,6 +45,7 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider
         defaultTheme="light"
+        // switchable
       >
         <TooltipProvider>
           <Toaster />
