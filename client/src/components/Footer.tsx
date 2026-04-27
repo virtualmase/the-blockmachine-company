@@ -195,12 +195,12 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             {/* Legal Links */}
             <div className="flex flex-wrap gap-4 text-sm">
-              <a href="#" className="text-slate-400 hover:text-orange-500 transition">
+              <Link href="/privacy" className="text-slate-400 hover:text-orange-500 transition">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-slate-400 hover:text-orange-500 transition">
+              </Link>
+              <Link href="/terms" className="text-slate-400 hover:text-orange-500 transition">
                 Terms of Service
-              </a>
+              </Link>
               <a href="#" className="text-slate-400 hover:text-orange-500 transition">
                 Cookie Policy
               </a>

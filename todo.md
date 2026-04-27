@@ -134,7 +134,7 @@
 - [x] Add sitemap links in footer
 - [x] Include contact info and social links
 - [x] Add newsletter signup
-- [ ] Include legal pages (privacy, terms)
+- [x] Include legal pages (privacy, terms)
 
 ### Accessibility & Compliance
 - [ ] Audit for WCAG 2.2 AA compliance
