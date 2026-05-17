@@ -5,10 +5,10 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Michael Rodriguez",
+      name: "Maria Gonzalez",
       company: "Rodriguez Construction",
-      role: "Project Manager",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=michael",
+      role: "Operations Manager",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/91150550/g4STPscA9Rs9r2jV7Gs5AW/testimonial-1-maria-construction-6tZJWB7Eyzw2gCB9WQbsUf.webp",
       quote:
         "BlockMachine Co's equipment transformed our production capacity. We increased output by 40% in the first month. Their support team is exceptional.",
       rating: 5,
@@ -16,10 +16,10 @@ export default function Testimonials() {
     },
     {
       id: 2,
-      name: "Sarah Chen",
-      company: "SoCal Developments",
-      role: "Operations Director",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=sarah",
+      name: "James Mitchell",
+      company: "Summit Development Group",
+      role: "Real Estate Developer",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/91150550/g4STPscA9Rs9r2jV7Gs5AW/testimonial-2-james-developer-gU7FvLJMzvVe3nu3TevDXK.webp",
       quote:
         "Renting from BlockMachine Co gave us the flexibility we needed for our seasonal projects. The equipment is top-notch and delivery is always on time.",
       rating: 5,
@@ -27,10 +27,10 @@ export default function Testimonials() {
     },
     {
       id: 3,
-      name: "James Thompson",
+      name: "Sarah Thompson",
       company: "Orange County Builders",
-      role: "CEO",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=james",
+      role: "Project Manager",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/91150550/g4STPscA9Rs9r2jV7Gs5AW/testimonial-3-sarah-contractor-2LtnZFjYjcQt7yPiZ4eNpu.webp",
       quote:
         "The CALGreen certified machines helped us meet sustainability requirements for our municipal contracts. BlockMachine Co is a trusted partner.",
       rating: 5,
@@ -38,10 +38,10 @@ export default function Testimonials() {
     },
     {
       id: 4,
-      name: "Lisa Martinez",
+      name: "David Ramirez",
       company: "Eco-Concrete Solutions",
-      role: "Sustainability Manager",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=lisa",
+      role: "Operations Director",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/91150550/g4STPscA9Rs9r2jV7Gs5AW/testimonial-4-david-manager-X6ZG3eboSPrdG82g6XRHWN.webp",
       quote:
         "Their commitment to sustainability aligns perfectly with our values. The energy-efficient machines reduced our carbon footprint significantly.",
       rating: 5,
