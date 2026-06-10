@@ -30,28 +30,26 @@ export default function Navigation() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">BM</span>
-              </div>
-              <span className="font-bold text-slate-900 hidden sm:inline">BlockMachine Co</span>
-            </a>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">BM</span>
+            </div>
+            <span className="font-bold text-slate-900 hidden sm:inline">BlockMachine Co</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a
-                  className={`text-sm font-medium transition-colors ${
-                    isActive(item.href)
-                      ? "text-orange-600"
-                      : "text-slate-600 hover:text-slate-900"
-                  }`}
-                >
-                  {item.label}
-                </a>
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(item.href)
+                    ? "text-orange-600"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                {item.label}
               </Link>
             ))}
           </div>
@@ -85,27 +83,26 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden border-t border-slate-200 py-4 space-y-3">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(item.href)
-                      ? "bg-orange-50 text-orange-600"
-                      : "text-slate-600 hover:bg-slate-50"
-                  }`}
-                >
-                  {item.label}
-                </a>
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  isActive(item.href)
+                    ? "bg-orange-50 text-orange-600"
+                    : "text-slate-600 hover:bg-slate-50"
+                }`}
+              >
+                {item.label}
               </Link>
             ))}
             {user?.role === "admin" && (
-              <Link href="/admin">
-                <a
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50"
-                >
-                  Admin Dashboard
-                </a>
+              <Link
+                href="/admin"
+                onClick={() => setIsOpen(false)}
+                className="block px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-50"
+              >
+                Admin Dashboard
               </Link>
             )}
             <Link href="/contact">
