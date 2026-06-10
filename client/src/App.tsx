@@ -14,6 +14,7 @@ import Rentals from "./pages/Rentals";
 import FAQ from "./pages/FAQ";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Resources from "./pages/Resources";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
@@ -28,6 +29,7 @@ function Router() {
         <Route path={"/about"} component={About} />
         <Route path={"/sustainability"} component={Sustainability} />
         <Route path={"/faq"} component={FAQ} />
+        <Route path={"/resources"} component={Resources} />
         <Route path={"/privacy"} component={Privacy} />
         <Route path={"/terms"} component={Terms} />
         <Route path={"/admin"} component={Admin} />

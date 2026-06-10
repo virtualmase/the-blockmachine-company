@@ -16,6 +16,7 @@ export default function Navigation() {
     { href: "/sustainability", label: "Sustainability" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
+    { href: "/resources", label: "Resources" },
     { href: "/faq", label: "FAQ" },
   ];
 
