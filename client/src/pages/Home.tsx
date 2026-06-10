@@ -8,6 +8,8 @@ import Testimonials from "@/components/Testimonials";
 import TrustSignals from "@/components/TrustSignals";
 import ImpactCalculator from "@/components/ImpactCalculator";
 import CertificationWizard from "@/components/CertificationWizard";
+import ESGDashboard from "@/components/ESGDashboard";
+import ComplianceTracker from "@/components/ComplianceTracker";
 
 export default function Home() {
   const { user, loading, isAuthenticated, logout } = useAuth();
@@ -151,6 +153,12 @@ export default function Home() {
 
       {/* CERTIFICATION WIZARD */}
       <CertificationWizard />
+
+      {/* ESG DASHBOARD */}
+      <ESGDashboard />
+
+      {/* COMPLIANCE TRACKER */}
+      <ComplianceTracker />
 
       {/* TESTIMONIALS */}
       <Testimonials />
