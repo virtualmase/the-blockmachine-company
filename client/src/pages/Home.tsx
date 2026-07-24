@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, Zap, Leaf, Shield, TrendingUp, Users, Award } from "lucide-react";
 import { getLoginUrl } from "@/const";
+import EnergySavingsCalculator from "@/components/EnergySavingsCalculator";
+import ComplianceChecker from "@/components/ComplianceChecker";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
@@ -109,6 +111,20 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Energy Savings Calculator */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <EnergySavingsCalculator />
+        </div>
+      </section>
+
+      {/* Compliance Checker */}
+      <section className="py-16 md:py-24 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <ComplianceChecker />
         </div>
       </section>
 
