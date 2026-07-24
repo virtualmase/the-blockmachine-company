@@ -11,9 +11,9 @@ export default function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/machines", label: "Machines" },
-    { href: "/rentals", label: "Rentals" },
-    { href: "/sustainability", label: "Sustainability" },
+    { href: "/machines", label: "Systems" },
+    { href: "/rentals", label: "Service Plans" },
+    { href: "/sustainability", label: "Efficiency" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
     { href: "/resources", label: "Resources" },
@@ -31,10 +31,10 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">BM</span>
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">CQ</span>
             </div>
-            <span className="font-bold text-slate-900 hidden sm:inline">BlockMachine Co</span>
+            <span className="font-bold text-slate-900 hidden sm:inline">ClimateIQ</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -45,7 +45,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? "text-orange-600"
+                    ? "text-blue-600"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
@@ -64,8 +64,8 @@ export default function Navigation() {
               </Link>
             )}
             <Link href="/contact">
-              <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white">
-                Request Quote
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                Get Started
               </Button>
             </Link>
           </div>
@@ -89,7 +89,7 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? "bg-orange-50 text-orange-600"
+                    ? "bg-blue-50 text-blue-600"
                     : "text-slate-600 hover:bg-slate-50"
                 }`}
               >
@@ -108,9 +108,9 @@ export default function Navigation() {
             <Link href="/contact">
               <Button
                 onClick={() => setIsOpen(false)}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
               >
-                Request Quote
+                Get Started
               </Button>
             </Link>
           </div>

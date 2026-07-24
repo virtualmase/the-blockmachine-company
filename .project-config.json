@@ -14,10 +14,11 @@
   ],
   "git_remote": {
     "repo_url": "s3://vida-prod-gitrepo/webdev-git/91150550/g4STPscA9Rs9r2jV7Gs5AW",
-    "access_key_id": "ASIAZV3A2ECZDAOVJNE2",
-    "secret_access_key": "1W72JyXYuba3r1shFgoPhmB2BVrPsMeX/kpwREjo",
-    "session_token": "IQoJb3JpZ2luX2VjECEaCXVzLWVhc3QtMSJHMEUCIQDbr001BFTlxJIy9R6FwawISKUI8Fzob3xvAYYrHEo9SAIgcmHnFOE3Aw9kJWJBlSuYZjB5HOVjDDCfFFNdRIl4S2cq6wMI6v//////////ARAEGgw2NjUzODYwOTg4NjYiDOms03EYWY7sWlL/Nyq/AxRaXsk2CoyDP7pBp9qQpGxoST2xk5JcbhGUmn/+w8wXF5wTy8/Dh8gMgZKtmxyCTwBdF74DqwtVX+Y9uoPtSbYP+iySrEH2T5GQbjPOJjHs8hW7rCphQrVZ545i1I3y/xCOtjKvLP9bYqbC/1cmNoGIvDCHI7rUqJaOPxUrNWvhqSp+KFsb+XHbufF0zRMou0a8R1ImuI3iVhMZehBxjOaOYxSgPJzds5PBMMbiZQoxAa9/Fl2NJuptUtJCRaB89rC7sHfMCdjmTtcXC9qzz4PQt8CuKGlQZQBpwHSlVlCdAUGMoMU9MId7O2pQy43wDsGEjRd3HKGVOjMQOYLX8AqoEC9Yr20vapnoc1oKglNa3ShwseL6T2NWtQ/2oy7a7JgVzNBe8j2RoIhssJk4BrgzXSrhoPaXA3yer2jjPav5wd6daKWpyU3r82N5wa3z6d9ThqA5A9DEwsRYdlk5Lr40HjZSrmucNhcLTdeFKWJm7/7RJ8R7ZKGz0Z2qUi3PNiAABMzACs39ZeAk6EyP++df98hTvOEoP3+q+RxROj5Iye+06/3Vc6j9lJc4jCYpmgGGJPOX1/JIxWYNxNJwxDCpqKbRBjqdAb5udM5lb/7fuTvfXIloXt+qwLeNJcJIcowiYzgjvZwBNmYIRVemXcxue3ykyAXzLGpMJsSM4+a5J27x1bx1g8VIm6ojB/vbUVgnzt0tPAulOgHwMH5YLkrlyRcct376BBiRz8shSo2KhR/A1EaySt/r3K4zi4SnIsoyt83KohHCG7hCSj8G71gvkM5NtfD0m/dUcvXjibMNy5JP/dY=",
-    "expiration": "2026-06-11T04:43:21.000Z"
+    "access_key_id": "ASIAZV3A2ECZJZCODSGM",
+    "secret_access_key": "PlkxgolAhagNWq4KGYYhvKGHkyLjlFrK2Db8vyn9",
+    "session_token": "IQoJb3JpZ2luX2VjEAAaCXVzLWVhc3QtMSJHMEUCIQCUHmRSXhHkMZwzFFvRWXPOg+gPPtLqtMupmO8lESgprAIgf+A6Hr3/0Ko/2zZs95YA6T5AvW9aeo2bc6/e57XrNX0q6wMIyP//////////ARAEGgw2NjUzODYwOTg4NjYiDFed2E/Y0k1cusixBiq/A1ANKJVCswU2FreZ8va/CPLv2r2BZZ+xmDm1U5XmkDrK3Xd9uFEFwSmhDLAfS65T7H5UthqiaW3vSROqNgS0wHDb08IvB1hgM8gAKd04l64oPkbdJOsCK9mfRnC0gVXL8W9nt5b+V6Md4BU6hHXT45ZH//M4gFDWkbzgWX465gaCNSfoxQgPUttB46KVhIfQiS/BqSuR7ItmLbJl2z4tNec9CAik2eLN+QhQ4rec9zaO3TbWQblFDsuVM41ax07GtI/vCZMPZyGpWubf7HdlSw74bD+ZWK48eRyPVTM10ETSBK8feyI81Y0qHGJEW99TqZw64felczxKZJYzZwBBoJQOn8spF3D776GJzvfb3giPguF4c/vd4uI4SJ5FTT/6uB4ISnyPUbEhTgyBb1xk2RKnsNi0ZsG/veAKJSrutbR1/OwVIjRUjDOM7W0YhZwD4tir1teCK14IeSS7pgju/f/Qr0YqapRKc33Zg3tCcdFjaZcxYsqn6Blb21wuUsDcI95STHh7gJt+QU/84nzGnJsnzzpcvjax2dMMrbZ32DqJ3OfnX5nwqdiFxvcitn1N36xn7WQHJx2Oh2D9aG03rzCY+P/SBjqdARGKGeADZmsirfhhKA3dRN/NDdKop/PVWGasB+Ev+SBAP6dRmvqforAuLW2dzTcjQFYYiSYEpolWukFlhrVW4w4FrDtJ6frNmyUg01CnkQAsIsIqlmTFWAVaDLbjJa0pC+jqAmgon3IHxAbxPATMslaSVZvreCjd0GpzrMNRq0UJsqyufMEdJnYQyi157hUP4//Uz+4DQZoICkCKkXI=",
+    "expiration": "2026-07-22T11:09:12.000Z",
+    "backend": "GIT_BACKEND_S3"
   },
   "name": "blockmachine-co-site",
   "path": "/home/ubuntu/blockmachine-co-site",
